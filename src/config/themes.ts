@@ -1,4 +1,4 @@
-import { Themes } from '../types'
+import { Themes } from '../types/themes'
 import colors from 'tailwindcss/colors'
 
 export const themesConfig = {
@@ -33,7 +33,7 @@ export const themesConfig = {
   },
 }
 
-const themes: Themes = {
+export const themes: Themes = {
   colors: {
     sets: {
       blue: {

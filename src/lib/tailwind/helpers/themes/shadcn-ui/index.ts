@@ -1,10 +1,11 @@
 import { extendTheme } from './theme-extention'
 import { generateCssInJs } from './css-in-js'
 import plugin from 'tailwindcss/plugin'
-import { Config } from 'tailwindcss/types/config'
+import { Config, CSSRuleObject } from 'tailwindcss/types/config'
 
-export function initializeShadcnPlugin(config: Pick<Config, 'theme' | 'plugins'>) {
+export function initializeShadcnPlugin(obj: { config: Pick<Config, 'theme' | 'plugins'>; baseCss?: CSSRuleObject | CSSRuleObject[] }) {
   return plugin(({ addBase }) => {
     addBase(generateCssInJs())
-  }, extendTheme(config))
+    if (obj.baseCss) addBase(obj.baseCss)
+  }, extendTheme(obj.config))
 }

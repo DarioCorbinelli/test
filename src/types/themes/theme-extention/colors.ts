@@ -25,4 +25,6 @@ export type SemanticColors_Advanced = {
 }
 export type SemanticColors = SemanticColors_Basic & SemanticColors_Advanced
 
-export type ThemeExtention_Colors = CoreColors & SemanticColors
+export type ThemeExtention_Colors = {
+  colors: CoreColors & SemanticColors
+}

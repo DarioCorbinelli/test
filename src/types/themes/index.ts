@@ -1,6 +1,6 @@
 import { themesConfig } from "../../config/themes";
 
-type ThemesConfig = typeof themesConfig
+export type ThemesConfig = typeof themesConfig
 
 export type ColorSets = ThemesConfig['colors']['sets']['values'][number]
 export type ColorModes = ThemesConfig['colors']['modes']['values'][number]
@@ -16,7 +16,7 @@ export type ColorTokens_Semantic_Advanced_NonDefaultShades = Exclude<ColorTokens
 
 export type ColorTokens_Semantic = ColorTokens_Semantic_Basic | ColorTokens_Semantic_Advanced
 
-export type BorderRadius_Arr = ThemesConfig['borderRadius']['values']
+type BorderRadius_Arr = ThemesConfig['borderRadius']['values']
 
 export type ColorSets_DataAttr = ThemesConfig['colors']['sets']['dataAttribute']
 export type ColorModes_DataAttr = ThemesConfig['colors']['modes']['dataAttribute']

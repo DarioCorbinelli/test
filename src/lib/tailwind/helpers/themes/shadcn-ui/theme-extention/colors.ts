@@ -60,5 +60,6 @@ export function generateColors(): ThemeExtention_Colors {
   const coreColors = generateColors_Core()
   const semanticColors = generateColors_Semantic()
 
-  return merge({}, coreColors, semanticColors)
+  const mergedColors = merge({}, coreColors, semanticColors)
+  return { colors: mergedColors }
 }

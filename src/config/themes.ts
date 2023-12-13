@@ -6,10 +6,12 @@ export const themesConfig = {
     sets: {
       values: ['blue', 'orange', 'rose'] as const,
       dataAttribute: 'color-set' as const,
+      default: 'orange' as const,
     },
     modes: {
       values: ['light', 'dark'] as const,
       dataAttribute: 'color-mode' as const,
+      default: 'light' as const,
     },
     tokens: {
       core: {
@@ -27,6 +29,7 @@ export const themesConfig = {
   },
   borderRadius: {
     values: ['0', '0.25', '0.5', '0.75', '1'] as const,
+    default: '0.5' as const,
     tokens: ['sm', 'md', 'lg'] as const,
     unit: 'rem' as const,
     dataAttribute: 'rounded' as const,
